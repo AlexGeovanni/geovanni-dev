@@ -46,13 +46,13 @@ export default function Carousel() {
   return (
     <div
       ref={containerRef}
-      className=" mask-x-from-50  overflow-hidden border border-amber-100"
+      className="overflow-hidden"
       onMouseEnter={() => tl.current?.pause()}
       onMouseLeave={() => tl.current?.resume()}
     >
       <div ref={trackRef} className="flex">
         {[...urlImg, ...urlImg].map((img, i) => (
-          <div key={i} className="min-w-10 px-2 shrink-0 brightness-50">
+          <div key={i} className="min-w-10 px-2 shrink-0 brightness-95 lg:brightness-75 lg:grayscale blur-[1px] group-hover/card:grayscale-0 hover:brightness-100 hover:blur-none transition-all duration-300">
             <Image
               src={`/${img}`}
               alt={img}
