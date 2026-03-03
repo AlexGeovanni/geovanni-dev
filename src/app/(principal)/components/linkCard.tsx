@@ -20,7 +20,7 @@ export default function LinkCard({ page }: { page: string }) {
         }}
         className="flex items-end justify-end gap-2 px-2.5 group/link"
       >
-        <div className=" leading-none underline-offset-4 group-hover/link:underline ">ver más</div>
+        <div className="leading-none underline-offset-4 group-hover/link:underline">ver más</div>
         <IconArrowLeft classname="size-4 rotate-180" />
       </Link>
     </div>

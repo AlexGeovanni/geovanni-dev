@@ -4,12 +4,11 @@ import PageTransition from "@/components/pageTransition";
 
 export default function Home() {
   return (
-    <PageTransition>
-
-    <main className="">
-      <Presentation />
-      <MenuBentoGrid />
-    </main>
-    </PageTransition>
+    <>
+      <main className="">
+        <Presentation />
+        <MenuBentoGrid />
+      </main>
+    </>
   );
 }

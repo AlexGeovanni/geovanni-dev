@@ -68,7 +68,8 @@ import { HTMLMotionProps, motion } from "motion/react";
 const PageTransition = (props: HTMLMotionProps<"div">) => {
 
   return (
-    <div className="bg-[#0a0a0a]">
+    // className="bg-[#0a0a0a]"
+    <div >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

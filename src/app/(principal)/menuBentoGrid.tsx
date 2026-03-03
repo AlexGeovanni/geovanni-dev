@@ -23,12 +23,16 @@ export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
                 alt="work_img"
                 width={350}
                 height={100}
-                className="min-h-20 object-contain group-hover/card:scale-105 transition-all duration-300"
+                className="min-h-20 rounded-lg object-contain group-hover/card:scale-105 transition-all duration-300"
               />
             </div>
           </Card>
           <div className="md:col-span-2 md:grid md:grid-cols-5 lg:grid-cols-3 lg:grid-rows-2 h-full w-full gap-4">
-            <Card data={experience} className="md:col-span-2 lg:col-span-1" opacity={30}>
+            <Card
+              data={experience}
+              className="md:col-span-2 lg:col-span-1"
+              opacity={30}
+            >
               <div className="absolute px-4 h-40  top-8 w-full flex flex-col gap-2 items-center justify-center [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] grayscale group-hover/card:grayscale-0 transition-all duration-300">
                 <div
                   className="w-full p-2 h-10 rounded-md border-[1.5px] border-white/10 bg-transparent 
@@ -66,10 +70,18 @@ export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
                 />
               </div>
             </Card>
-            <Card data={technology} className="col-span-2 lg:col-span-1" opacity={30}>
+            <Card
+              data={technology}
+              className="col-span-2 lg:col-span-1"
+              opacity={30}
+            >
               <Carousel />
             </Card>
-            <Card data={education} className="col-span-2 lg:col-span-1" opacity={30}>
+            <Card
+              data={education}
+              className="col-span-2 lg:col-span-1"
+              opacity={30}
+            >
               zz
             </Card>
             {/* <Card data={experience} className="lg:col-span-auto" opacity={30} /> */}
