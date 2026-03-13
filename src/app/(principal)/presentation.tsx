@@ -1,71 +1,91 @@
 "use client";
 
 import Container from "@/components/container";
-import {motion} from "motion/react" 
+import { motion } from "motion/react";
 export default function Presentation({ className }: { className?: string }) {
   // rgba(94, 212, 255, 0.15)
   return (
     <section className={`relative min-h-svh h-full ${className}`}>
-      {/* <div
-        className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[600px] -translate-x-[30%] translate-y-[20%] rounded-full
-           bg-[rgba(94,212,255,0.4)] opacity-50 blur-[100px]"
-      ></div> */}
-      {/* <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_450px_at_100%_200px,#5ed4ff38,transparent)] blur-[70px]"></div> */}
-      <div className="flex lg:m-4  lg:bg-gradient-to-b from-[#0a0a0a] to-transparent  lg:rounded-2xl h-[calc(100svh-2rem)] overflow-hidden  flex-col relative ">
-        <motion.div className="absolute pointer-events-none animate-fade-in bg-ambientLight left-0 top-0 h-[1380px] w-[560px] rounded-full translate-y-[-350px] rotate-[-45deg]"></motion.div>
-        <motion.div className="absolute pointer-events-none animate-fade-in bg-ambientLight3 left-0 top-0 h-[1380px] w-[240px] rounded-full translate-y-[-70%] translate-x-[-180%] rotate-[-45deg]"></motion.div>
-        <motion.div className="absolute pointer-events-none animate-fade-in bg-ambientLight2 left-0 top-0 h-[1380px] w-[240px] rounded-full translate-y-[-50%] translate-x-[5%] rotate-[-45deg]"></motion.div>
-        <motion.div className=" z-5 pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)] lg:[mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)]"></motion.div>
-        <GridPattern />
-        <Container className="relative flex flex-col justify-end h-full ">
-          <div className="absolute z-10 inset-0 flex justify-center items-center">
-            <h1 className="scroll-m-20 text-7xl font-heading font-semibold lg:text-9xl text-balance max-w-5xl bg-gradient-to-r from-foreground text-transparent via-56% via-white to-foreground/60 inline-block bg-clip-text">
-              GEOVANNI DIAZ
-              {/* <div className="text-xs tracking-wide font-medium border border-[#5ed4ff] text-[#5ed4ff] rounded-full px-2 py-1 w-fit flex items-center gap-1 ml-3">
+      <header className="absolute top-0 left-0 w-full z-99 ">
+        <Container className="max-w-345! w-full lg:mx-4! p-4!">
+          <h1 className="text-lg font-medium text-balance ">
+            Alex Geovanni
+            {/* <div className="text-xs tracking-wide font-medium border border-[#5ed4ff] text-[#5ed4ff] rounded-full px-2 py-1 w-fit flex items-center gap-1 ml-3">
               <span className="flex h-3 w-3 items-center">
                 <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full opacity-75 bg-green-500"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </span>
               Disponible para trabajar
             </div> */}
-            </h1>
+            <div className="text-zinc-400 font-light text-sm">
+              Desarrollador frontend
+            </div>
+          </h1>
+        </Container>
+      </header>
+      {/* <div
+        className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[600px] -translate-x-[30%] translate-y-[20%] rounded-full
+           bg-[rgba(94,212,255,0.4)] opacity-50 blur-[100px]"
+      ></div> */}
+      {/* <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_450px_at_100%_200px,#5ed4ff38,transparent)] blur-[70px]"></div> */}
+      <div className="flex lg:m-4 lg:bg-gradient-to-b from-[#0a0a0a] to-transparent  lg:rounded-2xl h-[calc(100svh-2rem)] overflow-hidden  flex-col relative ">
+        <motion.div className="absolute pointer-events-none animate-fade-in bg-ambientLight left-0 top-0 h-[1380px] w-[560px] rounded-full translate-y-[-350px] rotate-[-45deg]"></motion.div>
+        <motion.div className="absolute pointer-events-none animate-fade-in bg-ambientLight3 left-0 top-0 h-[1380px] w-[240px] rounded-full translate-y-[-70%] translate-x-[-180%] rotate-[-45deg]"></motion.div>
+        <motion.div className="absolute pointer-events-none animate-fade-in bg-ambientLight2 left-0 top-0 h-[1380px] w-[240px] rounded-full translate-y-[-50%] translate-x-[5%] rotate-[-45deg]"></motion.div>
+        <motion.div className=" z-5 pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)] lg:[mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)]"></motion.div>
+        <GridPattern />
+        <Container className="relative flex flex-col justify-end h-full ">
+          <div className="absolute z-10 inset-0 flex justify-center items-center ">
+            {/* to-foreground/60  */}
+            <div className="max-w-400 text-center ">
+              <div className="w-full bg-linear-to-r from-foreground text-transparent via-14% via-white to-110% inline-block bg-clip-text">
+                <h1 className="scroll-m-20 leading-snug text-[clamp(2rem,8vw,2.5rem)] md:text-5xl font-heading font-semibold xl:text-6xl text-balance max-w-5xl">
+                  DESARROLLANDO INTERFACES DE USUARIOS INTUITIVAS
+                </h1>
+              </div>
+              <p className="mt-2">
+                Transformo diseños en experiencias web interactivas.
+              </p>
+            </div>
           </div>
-          <div className="pb-10 flex flex-col md:flex-row justify-between">
-            <motion.div 
-            initial={{
-              y:10,
-              opacity:0
-            }}
-            animate={{
-              y:0,
-              opacity:1,
-              transition:{
-                ease:"easeIn",
-                duration:0.3
-              }
-            }}
-            className="text-2xl text-slate-100 md:ml-3">
+          <div className="pb-10 flex flex-col md:flex-row justify-between hidden">
+            <motion.div
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  ease: "easeIn",
+                  duration: 0.3,
+                },
+              }}
+              className="text-2xl text-slate-100 md:ml-3"
+            >
               Desarrollador Web
             </motion.div>
-            <motion.div 
-            initial={{
-              y:20,
-              opacity:0,
-            }}
-            animate={{
-              y:0,
-              opacity:1,
-              transition:{
-                ease:"easeIn",
-                duration:0.3,
-                delay:0.2
-              }
-            }}
-            className="font-medium text-slate-100 max-w-[50ch] ">
+            <motion.div
+              initial={{
+                y: 20,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  ease: "easeIn",
+                  duration: 0.3,
+                  delay: 0.2,
+                },
+              }}
+              className="font-medium text-slate-100 max-w-[50ch] "
+            >
               {/* Desarrollo interfaces web con tecnologías modernas, creando
             soluciones útiles que combinan diseño y rendimiento para mejorar la
             experiencia del usuario. */}
-              +1.5 años de experiencia, soy persona enfocado y con muchas ganas
+              +1 años de experiencia, soy persona enfocado y con muchas ganas
               crear soluciones utiles para las personas.
             </motion.div>
           </div>
@@ -76,16 +96,16 @@ export default function Presentation({ className }: { className?: string }) {
 }
 
 const GridPattern = () => (
-  <div className="z-5  pointer-events-none absolute inset-0 flex w-screen h-svh items-center justify-center overflow-hidden [mask-image:radial-gradient(transparent_15%,white)]">
+  <div className="z-5 pointer-events-none absolute inset-0 flex w-screen h-svh items-center justify-center overflow-hidden [mask-image:radial-gradient(transparent_15%,white)]">
     <svg
-      className=" absolute z-5   left-0 top-0 size-full  [mask-image:linear-gradient(transparent_7%,white,transparent_85%)]"
+      className="absolute z-5 left-0 top-0 size-full  [mask-image:linear-gradient(transparent_7%,white,transparent_90%)]"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
         {/* <!-- Máscara radial suave --> */}
         <radialGradient id="fade" cx="50%" cy="50%" r="75%">
-          <stop offset="0%" stop-color="white" />
-          <stop offset="100%" stop-color="white" />
+          <stop offset="0%" stopColor="white" />
+          <stop offset="100%" stopColor="white" />
         </radialGradient>
 
         <mask id="mask">
@@ -105,7 +125,7 @@ const GridPattern = () => (
             height="96"
             fill="transparent"
             stroke="#ffffff"
-            stroke-width="1"
+            strokeWidth="1"
           />
         </pattern>
       </defs>

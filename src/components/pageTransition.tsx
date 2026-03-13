@@ -69,7 +69,7 @@ const PageTransition = (props: HTMLMotionProps<"div">) => {
 
   return (
     // className="bg-[#0a0a0a]"
-    <div >
+    <div className="bg-[#0a0a0a]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

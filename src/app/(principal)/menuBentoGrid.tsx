@@ -1,10 +1,10 @@
+"use client";
+
 import CardSpotlight from "@/components/cardSpotlight";
 import Container from "@/components/container";
-import LinkCard from "./components/linkCard";
-import { aboutMe, experience, technology, work, education } from "@/data";
-import { IconEmail, IconGithub, IconLinkedin } from "@/icons";
+import { aboutMe, experience, work, education } from "@/data";
+import { IconLocation } from "@/icons";
 import Image from "next/image";
-import Carousel from "./components/carousel";
 
 interface MenuBentoGridProps {
   className?: string;
@@ -12,95 +12,121 @@ interface MenuBentoGridProps {
 export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
   return (
     <section
-      className={`min-h-dvh h-full flex flex-col items-center justify-center ${className}`}
+      className={`border-t  border-white/10 h-full flex items-stretch justify-stretch ${className}`}
     >
-      <Container>
-        <div className=" w-full h-[60dvh] md:grid md:grid-cols-3 md:gap-4 lg:h-[65dvh]  ">
-          <Card data={aboutMe} className="col-span-1" opacity={65}>
-            <div className="absolute inset-0 pt-2 flex items-center justify-center [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)] lg:grayscale group-hover/card:grayscale-0 transition-all duration-300">
-              <Image
-                src="/img/me_card.png"
-                alt="work_img"
-                width={350}
-                height={100}
-                className="min-h-20 rounded-lg object-contain group-hover/card:scale-105 transition-all duration-300"
-              />
+      <Container className="border-l border-r border-b border-white/10">
+        <div className=" w-full md:grid md:grid-cols-4 lg:grid-cols-3 tablet:min-h-[490px] xl:h-137">
+          <Card
+            data={aboutMe}
+            className=" col-span-2 min-h-100 lg:col-span-1 border-r border-white/10 h-120 lg:h-auto"
+            opacity={45}
+            isActive={false}
+          >
+            <div className="absolute top-0 left-0 right-0 p-5 flex items-center justify-center lg:grayscale group-hover/card:grayscale-0 transition-all duration-300 mask-[linear-gradient(to_top,rgba(255,255,255,0)_10%,rgba(255,255,255,0.1)_40%,#000000_100%)]">
+              <div className="overflow-hidden rounded-md">
+                <picture>
+                  <img
+                  src={'/img/card_me.JPG'}
+                  alt="image about me"
+                  width={600}
+                  height={600}
+                  className="min-h-20 -mt-11 w-full rounded-md object-contain "
+                />
+                </picture>
+              </div>
+            </div>
+            <div className="p-5 space-y-2 transform-gpu flex-col gap-1 -translate-y-5 transition-all duration-300 lg:translate-y-0 lg:group-hover/card:-translate-y-8">
+              <p className="font-bold text-2xl uppercase lg:text-3xl group-hover/card:text-[26px] transition-all ease-out duration-400">
+                Geovanni
+              </p>
+              <p className="font-medium text-xl lg:text-2xl">Desarrollador Frontend</p>
+              <p className=" text-gray-400 font-light lg:text-xl">
+                +1 años de experiencia, soy persona enfocado y con muchas ganas
+                crear soluciones utiles para las personas...
+              </p>
+              <div className="mt-2">
+                <div className="border text-gray-300 inline-flex items-center gap-1 rounded-full py-1 px-2 text-xs border-white/20 ">
+                  <IconLocation size={18} /> Puebla, Mexico
+                </div>
+              </div>
             </div>
           </Card>
-          <div className="md:col-span-2 md:grid md:grid-cols-5 lg:grid-cols-3 lg:grid-rows-2 h-full w-full gap-4">
+          <div className="md:col-span-2 md:grid md:grid-cols-6 lg:grid-rows-5 h-full w-full ">
             <Card
               data={experience}
-              className="md:col-span-2 lg:col-span-1"
+              className="border-b border-r border-white/10 h-60 sm:h-45 md:h-auto sm:col-span-3 md:col-span-6 lg:col-span-3 md:row-span-2"
               opacity={30}
             >
-              <div className="absolute px-4 h-40  top-8 w-full flex flex-col gap-2 items-center justify-center [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] grayscale group-hover/card:grayscale-0 transition-all duration-300">
+              <div className="absolute px-4 h-60 top-0 tablet:top-5 w-full flex flex-col gap-2 items-center justify-center [mask:linear-gradient(to_top,transparent_35%,#000_100%)] grayscale group-hover/card:grayscale-0 transition-all duration-300">
                 <div
-                  className="w-full p-2 h-10 rounded-md border-[1.5px] border-white/10 bg-transparent 
+                  className="w-full p-2 tablet:h-18 rounded-md border-[1.5px] border-white/10 bg-transparent 
         [box-shadow:0_-10px_80px_-20px_#ffffff1f_inset]"
                 >
-                  <div className="w-16 h-1.5 bg-[#D9D9D9]/50 rounded" />
-                  <div className="mt-2 w-32 h-1.5 bg-[#D9D9D9]/50 rounded" />
+                  <div className="text-xs text-[#D9D9D9]/50 ">
+                    Desarrollador frontend
+                  </div>
+                  {/* <div className="w-16 h-1.5 bg-[#D9D9D9]/50 rounded" /> */}
+                  <div className="mt-2 w-[50%] h-1.5 bg-[#D9D9D9]/50 rounded" />
+                  <div className="mt-2 w-[85%] h-1.5 bg-[#D9D9D9]/50 rounded" />
                 </div>
                 <div
-                  className="w-full p-2 h-10 rounded-md border-[1.5px] border-white/10 bg-transparent 
+                  className="w-full p-2 tablet:h-18 rounded-md border-[1.5px] border-white/10 bg-transparent 
         [box-shadow:0_-10px_80px_-20px_#ffffff1f_inset]"
                 >
                   <div className="w-16 h-1.5 bg-[#D9D9D9]/50 rounded" />
-                  <div className="mt-2 w-32 h-1.5 bg-[#D9D9D9]/50 rounded" />
+                  <div className="mt-2 w-[50%] h-1.5 bg-[#D9D9D9]/50 rounded" />
+                  <div className="mt-2 w-[85%] h-1.5 bg-[#D9D9D9]/50 rounded" />
                 </div>
                 <div
-                  className="w-full p-2 h-10 rounded-md border-[1.5px] border-white/10 bg-transparent 
+                  className="w-full p-2 tablet:h-18 rounded-md border-[1.5px] border-white/10 bg-transparent 
         [box-shadow:0_-10px_80px_-20px_#ffffff1f_inset]"
                 >
                   <div className="w-16 h-1.5 bg-[#D9D9D9]/50 rounded" />
-                  <div className="mt-2 w-32 h-1.5 bg-[#D9D9D9]/50 rounded" />
+                  <div className="mt-2 w-[50%] h-1.5 bg-[#D9D9D9]/50 rounded" />
+                  <div className="mt-2 w-[85%] h-1.5 bg-[#D9D9D9]/50 rounded" />
                 </div>
                 {/* <div className="w-full h-9 rounded-md border-[1.5px] border-white/10 bg-transparent 
         [box-shadow:0_-10px_80px_-20px_#ffffff1f_inset]" /> */}
               </div>
             </Card>
-            <Card data={work} className="col-span-3 lg:col-span-2" opacity={45}>
-              <div className="absolute inset-0 pt-2 flex items-center justify-center [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)] lg:grayscale group-hover/card:grayscale-0 transition-all duration-300">
+            <Card
+              data={education}
+              className="border-b  border-white/10 h-35 md:h-auto md:col-span-3 md:col-span-6 lg:col-span-3 lg:row-span-2"
+              opacity={45}
+            ></Card>
+            <Card
+              data={work}
+              className="hidden border-r border-white/10 col-span-2 lg:col-span-6 lg:block lg:row-span-3"
+              opacity={30}
+            >
+              <div className="absolute -top-2 left-0 right-0 flex items-center justify-center [mask:linear-gradient(to_top,transparent_30%,#000_100%)] lg:grayscale group-hover/card:grayscale-0 transition-all duration-300">
                 <Image
                   src="/img/banner_proyect.png"
                   alt="work_img"
-                  width={350}
+                  width={800}
                   height={100}
                   className="min-h-20 object-contain group-hover/card:scale-105 transition-all duration-300"
                 />
               </div>
             </Card>
-            <Card
-              data={technology}
-              className="col-span-2 lg:col-span-1"
-              opacity={30}
-            >
-              <Carousel />
-            </Card>
-            <Card
-              data={education}
-              className="col-span-2 lg:col-span-1"
-              opacity={30}
-            >
-              zz
-            </Card>
-            {/* <Card data={experience} className="lg:col-span-auto" opacity={30} /> */}
-            <div className="lg:col-span-auto grid grid-cols-2 grid-rows-2">
-              <div className=" rounded-xl">
-                <IconLinkedin />
-              </div>
-              <div className=" rounded-xl"></div>
-              <div className=" rounded-xl">
-                <IconGithub />
-              </div>
-              <div className=" rounded-xl">
-                <IconEmail />
-              </div>
-            </div>
           </div>
+          <Card
+            data={work}
+            className="border-r min-h-50 border-white/10 col-span-4 h-75 lg:hidden"
+            opacity={30}
+          >
+            <div className="absolute top-2 left-0 right-0 flex items-center justify-center [mask:linear-gradient(to_top,transparent_20%,#000_100%)] md:[mask:linear-gradient(to_top,transparent_30%,#000_100%)] md:-top-2 lg:grayscale group-hover/card:grayscale-0 transition-all duration-300">
+              <Image
+                src="/img/banner_proyect.png"
+                alt="work_img"
+                width={800}
+                height={100}
+                className="min-h-20 object-cover aspect-1.5/1 md:aspect-auto group-hover/card:scale-105 transition-all duration-300"
+              />
+            </div>
+          </Card>
         </div>
       </Container>
-      {/* <Carousel /> */}
     </section>
   );
 }
@@ -109,28 +135,28 @@ const Card = ({
   data,
   className,
   opacity,
+  isActive = true,
   children,
 }: {
   data: typeof aboutMe | typeof experience | typeof work;
   className?: string;
   opacity: number;
-  children: React.ReactNode;
+  isActive?: boolean;
+  children?: React.ReactNode;
 }) => {
   return (
     <div
-      className={`group/card relative h-full hover:shadow-[0_0_30px_-5px_rgba(94,212,255,0.15)] transition-all ease-in-out duration-300 ${className}`}
+      className={`group/card relative lg:h-full xl:h-full  ${className}`}
     >
       <CardSpotlight opacity={opacity} data={data}>
         {children}
-        {/* <h3 className="text-xl font-semibold leading-7 text-white font-clash">
-          {data.title}
-        </h3>
-        <div className="flex m-auto border">
-          <p className="font-pluJarkarta font-normal text-gray-300 text-sm line-clamp-2 transition-all duration-300 group/card-hover:-translate-y-[30px]">
-            {data.description}
-          </p>
-        </div> */}
-        {/* <LinkCard key={data.title} page={data.link} /> */}
+        {isActive && (
+          <div className="p-5 transform-gpu flex-col gap-1 -translate-y-5 transition-all duration-300 lg:translate-y-0 lg:group-hover/card:-translate-y-5">
+            <p className="font-bold text-[clamp(1.4rem,10vw,1.5rem)] uppercase  xl:text-[clamp(1.5rem,9vw,1.9rem)] group-hover/card:text-[26px] transition-all ease-out duration-400">
+              {data.title}
+            </p>
+          </div>
+        )}
       </CardSpotlight>
     </div>
   );

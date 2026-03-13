@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xsm: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md:768px;
+  --breakpoint-tablet: 900px;
+  --breakpoint-lg-md: 1132px;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -11,17 +18,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-@theme {
-  --breakpoint-xsm: 475px;
-  --breakpoint-lg-md: 1132px;
-}
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 .bg-ambientLight {
   background-image: radial-gradient(
@@ -57,9 +60,11 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* background: var(--background);
+  color: var(--foreground); */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  background: #0a0a0a;
+  color: #ededed;
 }
 ::view-transition-group(root) {
   z-index: auto !important;

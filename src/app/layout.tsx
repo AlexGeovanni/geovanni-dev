@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
-import BackgroundAnimate from "@/components/backgroundAnimate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +12,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const interTight = Inter_Tight({
+  variable:"--font-inter-tight",
+  weight:['200','300','400','500','600','700','800','900'],
+  subsets:["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,9 +34,8 @@ export default function RootLayout({
 
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+          className={`${interTight.className} bg-[#0a0a0a] `}
         >
-          {/* <BackgroundAnimate /> */}
           {children}
         </body>
       </html>

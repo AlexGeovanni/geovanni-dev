@@ -29,13 +29,13 @@ export default function CardSpotlight({
     <>
       <div
         // px-8 py-16
-        className="relative flex flex-col justify-between overflow-hidden h-full rounded-xl border-[1.5px] border-white/10 bg-transparent 
-        [box-shadow:0_-10px_80px_-20px_#ffffff1f_inset]
+        className="relative flex flex-col overflow-hidden h-full bg-transparent 
+        [box-shadow:0_-10px_80px_-20px_#ffffff15_inset]
       "
         onMouseMove={handleMouseMove}
       >
         <motion.div
-          className="pointer-events-none z-10 absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover/card:opacity-100"
+          className="pointer-events-none z-10 absolute -inset-px  opacity-0 transition duration-300 group-hover/card:opacity-100"
           style={{
             background: useMotionTemplate`
             radial-gradient(
@@ -46,14 +46,7 @@ export default function CardSpotlight({
             `,
           }}
         />
-        {/* <div className="p-4 overflow-hidden relative h-full borde">{children}</div> */}
-        <div className="p-4 text-xl font-semibold leading-7 text-[#D9D9D9]">{data.title}</div>
-        <div className="flex-1 flex flex-col justify-center">{children}</div>
-        <div className="p-4 pb-2 lg:pb-4">
-          <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 -translate-y-10 transition-all duration-300 lg:translate-y-0 lg:group-hover/card:-translate-y-10">
-            <p className="font-normal text-[#808080] text-sm line-clamp-2 ">{data.description}</p>
-          </div>
-        </div>
+        <div className="flex-1 flex flex-col justify-end">{children}</div>
         <LinkCard key={data.title} page={data.link} />   
       </div>
       <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover/card:bg-[#ffffff1f]/5"></div>

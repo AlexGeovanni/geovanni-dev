@@ -258,73 +258,6 @@ export const IconExperience = ({
   );
 };
 
-export const IconDownload = ({
-  size = 24,
-  color = "transparent",
-  classname,
-}: Props) => {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox={`0 0 ${size} ${size}`}
-      fill={color}
-      xmlns="http://www.w3.org/2000/svg"
-      className={classname}
-    >
-      <g clip-path="url(#clip0_4418_3618)">
-        <path
-          d="M9 14.3496V16.9996L11 14.9996"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M9 11V12"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M9 17L7 15"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M2 9C2 4 4 2 9 2H14"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V12.98"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M18 10C15 10 14 9 14 6V2L22 10"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_4418_3618">
-          <rect width="24" height="24" fill="white" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
-};
-
 export const IconArrowOutward = ({
   size = 24,
   color = "#ffffff",
@@ -367,8 +300,8 @@ export const IconLinkedin = ({ size = 110, classname }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={115}
-      height={115}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       stroke="none"
       fill="currentColor"
@@ -384,8 +317,8 @@ export const IconEmail = ({ size = 110, classname }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={110}
-      height={110}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -405,8 +338,8 @@ export const IconGithub = ({ size = 110, classname }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={100}
-      height={100}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="currentColor"
       className="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"
@@ -436,5 +369,65 @@ export const IconCalendar = ({ size = 110, classname }: Props) => (
     <path d="M8 3l0 4" />
     <path d="M4 11l16 0" />
     <path d="M8 15h2v2h-2l0 -2" />
+  </svg>
+);
+
+export const IconLocation = ({ size = 24, classname }: Props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.25}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`icon icon-tabler icons-tabler-outline icon-tabler-map-pin ${classname}`}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
+  </svg>
+);
+
+export const IconDownload = ({ size = 24, classname }: Props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`icon icon-tabler icons-tabler-outline icon-tabler-download ${classname}`}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+    <path d="M7 11l5 5l5 -5" />
+    <path d="M12 4l0 12" />
+  </svg>
+);
+
+export const IconFile = ({ size = 24, classname }: Props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`icon icon-tabler icons-tabler-outline icon-tabler-file-description ${classname}`}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+    <path d="M9 17h6" />
+    <path d="M9 13h6" />
   </svg>
 );

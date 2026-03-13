@@ -27,7 +27,7 @@ const technology = {
 };
 
 const education = {
-  title: "Educación",
+  title: "Formacion academica",
   link: "/educacion",
   description:
     "Desarrollo interfaces web con tecnologías modernas, creando soluciones útiles que combinan diseño y rendimiento para mejorar la experiencia del usuario.",

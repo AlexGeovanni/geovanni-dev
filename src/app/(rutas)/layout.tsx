@@ -13,7 +13,7 @@ export default function RutasLayout({
   return (
     <main className="min-h-dvh">
       <header>
-        <Container className="lg-md:max-w-[1140px] pt-12 mb-5 lg:pt-16 lg:mb-8">
+        <Container className="px-4 pt-12 mb-5 lg:pt-16 lg:mb-8">
           <Link
             href="/"
             onClick={(e) => {
@@ -29,7 +29,7 @@ export default function RutasLayout({
         </Container>
       </header>
       <section>
-        <Container className="">{children}</Container>
+        <Container className="px-4">{children}</Container>
       </section>
     </main>
   );

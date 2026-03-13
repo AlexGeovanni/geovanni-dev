@@ -11,11 +11,11 @@ export default function EducacionPage() {
       </div>
       <div className="mb-4">
         <div className="flex flex-col space-y-2">
-          <h3 className="text-xl font-semibold">
+          <h3 className="text-2xl font-bold lg:text-4xl">
             Licenciatura en Sistemas Computacionales
           </h3>
-          <span className="font-semibold">Universidad Aútonoma de chiapas</span>
-          <span className="font-mono text-[#808080] flex gap-1 items-center text-sm"><IconCalendar size={18} classname="text-[#808080]" />  2018-2023</span>
+          <span className="font-medium text-xl lg:text-2xl">Universidad Aútonoma de chiapas</span>
+          <span className="font-mono text-[#808080] flex gap-1 items-center text-sm lg:text-base"><IconCalendar size={18} classname="text-[#808080]" />  2018-2023</span>
         </div>
         {/* <p>
           Construi bases solidas en programación, bases de datos(SQL/ modelado
@@ -31,7 +31,7 @@ export default function EducacionPage() {
           competencias  y buenas
           prácticas de programación.
         </p> */}
-        <div className="text-balance mt-4 space-y-1.5 leading-relaxed tracking-wide">
+        <div className="text-balance mt-4 space-y-1.5 leading-relaxed tracking-wide lg:text-lg">
           <p>
             Construí bases sólidas en programación, bases de datos (SQL y
             modelado relacional) y desarrollo de software, iniciando con
