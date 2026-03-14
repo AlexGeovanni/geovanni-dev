@@ -63,6 +63,8 @@ export default function CardJob({ job }: Props) {
               alt={`imagen de proyecto - ${title}`}
               width={500}
               height={500}
+              sizes="100vw"
+              priority
               className="w-full brightness-90 h-auto aspect-auto object-cover rounded-md "
             />
           </motion.div>
