@@ -14,11 +14,11 @@ export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
     <section
       className={`border-t  border-white/10 h-full flex items-stretch justify-stretch ${className}`}
     >
-      <Container className="border-l border-r border-b border-white/10">
-        <div className=" w-full md:grid md:grid-cols-4 lg:grid-cols-3 tablet:min-h-[490px] xl:h-137">
+      <Container className="border-b border-white/10 xl:border-l xl:border-r">
+        <div className="w-full md:grid md:grid-cols-4 lg:grid-cols-3 tablet:min-h-[490px] xl:h-137">
           <Card
             data={aboutMe}
-            className=" col-span-2 min-h-100 lg:col-span-1 border-r border-white/10 h-120 lg:h-auto"
+            className=" col-span-2 min-h-100 lg:col-span-1 border-b border-white/10 h-120 md:border-r lg:border-b-0 lg:h-auto "
             opacity={45}
             isActive={false}
           >
@@ -51,10 +51,10 @@ export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
               </div>
             </div>
           </Card>
-          <div className="md:col-span-2 md:grid md:grid-cols-6 lg:grid-rows-5 h-full w-full ">
+          <div className="h-full w-full md:col-span-2 md:grid md:grid-cols-6 lg:grid-rows-5">
             <Card
               data={experience}
-              className="border-b border-r border-white/10 h-60 sm:h-45 md:h-auto sm:col-span-3 md:col-span-6 lg:col-span-3 md:row-span-2"
+              className="border-b border-white/10 h-60 sm:h-45 sm:col-span-3 md:h-auto md:col-span-6 md:row-span-2 lg:col-span-3"
               opacity={30}
             >
               <div className="absolute px-4 h-60 top-0 tablet:top-5 w-full flex flex-col gap-2 items-center justify-center [mask:linear-gradient(to_top,transparent_35%,#000_100%)] grayscale group-hover/card:grayscale-0 transition-all duration-300">
@@ -91,12 +91,12 @@ export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
             </Card>
             <Card
               data={education}
-              className="border-b  border-white/10 h-35 md:h-auto md:col-span-3 md:col-span-6 lg:col-span-3 lg:row-span-2"
+              className=" border-white/10 border-b h-35 md:h-auto md:col-span-6 lg:col-span-3 lg:row-span-2"
               opacity={45}
             ></Card>
             <Card
               data={work}
-              className="hidden border-r border-white/10 col-span-2 lg:col-span-6 lg:block lg:row-span-3"
+              className="hidden opacity-0 pointer-events-none border-white/10 col-span-2 lg:col-span-6 lg:block lg:opacity-100 lg:pointer-events-auto lg:row-span-3"
               opacity={30}
             >
               <div className="absolute -top-2 left-0 right-0 flex items-center justify-center [mask:linear-gradient(to_top,transparent_30%,#000_100%)] lg:grayscale group-hover/card:grayscale-0 transition-all duration-300">
@@ -112,7 +112,7 @@ export default function MenuBentoGrid({ className }: MenuBentoGridProps) {
           </div>
           <Card
             data={work}
-            className="border-r min-h-50 border-white/10 col-span-4 h-75 lg:hidden"
+            className=" min-h-50 border-white/10 col-span-4 h-75 lg:hidden lg:opacity-0 lg:pointer-events-none"
             opacity={30}
           >
             <div className="absolute top-2 left-0 right-0 flex items-center justify-center [mask:linear-gradient(to_top,transparent_20%,#000_100%)] md:[mask:linear-gradient(to_top,transparent_30%,#000_100%)] md:-top-2 lg:grayscale group-hover/card:grayscale-0 transition-all duration-300">

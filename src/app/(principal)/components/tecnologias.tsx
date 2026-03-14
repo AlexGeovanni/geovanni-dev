@@ -197,12 +197,12 @@ const tec = [
 export default function Tecnologias() {
   return (
     <div className=" border-white/10 ">
-      <Container className="flex gap-y-2 gap-x-3 flex-wrap justify-between items-center px-4 py-5 pt-15 lg:px-5! border-white/10 xl:border-l xl:border-r ">
+      {/* <Container className="flex gap-y-2 gap-x-3 flex-wrap justify-between items-center px-4 py-5 pt-15 lg:px-5! border-white/10 xl:border-l xl:border-r ">
         <h2 className="text-3xl font-bold md:text-5xl mb-1">Pila tecnologíca</h2>
         <p className=" space-y-3 font-light text-gray-400 leading-5 tracking-wide md:text-balance  md:text-xl">
           Un resumen sobre las tecnologías en las que he trabajado.
         </p>
-      </Container>
+      </Container> */}
       <div className="max-w-7xl w-full mx-auto h-px bg-white/10" />
       <Container className=" relative ">
         <div className="grid grid-cols-1 lg:grid-cols-9">

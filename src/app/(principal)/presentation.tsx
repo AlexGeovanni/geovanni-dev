@@ -7,7 +7,7 @@ export default function Presentation({ className }: { className?: string }) {
   return (
     <section className={`relative min-h-svh h-full ${className}`}>
       <header className="absolute top-0 left-0 w-full z-99 ">
-        <Container className="max-w-345! w-full lg:mx-4! p-4!">
+        <Container className="max-w-345! w-full px-8 py-5">
           <h1 className="text-lg font-medium text-balance ">
             Alex Geovanni
             {/* <div className="text-xs tracking-wide font-medium border border-[#5ed4ff] text-[#5ed4ff] rounded-full px-2 py-1 w-fit flex items-center gap-1 ml-3">
@@ -38,8 +38,8 @@ export default function Presentation({ className }: { className?: string }) {
           <div className="absolute z-10 inset-0 flex justify-center items-center ">
             {/* to-foreground/60  */}
             <div className="max-w-400 text-center ">
-              <div className="w-full bg-linear-to-r from-foreground text-transparent via-14% via-white to-110% inline-block bg-clip-text">
-                <h1 className="scroll-m-20 leading-snug text-[clamp(2rem,8vw,2.5rem)] md:text-5xl font-heading font-semibold xl:text-6xl text-balance max-w-5xl">
+              <div className="w-full bg-linear-to-r from-foreground text-transparent via-10% via-white to-150% inline-block bg-clip-text">
+                <h1 className="scroll-m-20 font-heading font-extrabold text-balance max-w-5xl leading-snug text-[clamp(2rem,8vw,2.5rem)] md:text-5xl lg:leading-16 xl:text-6xl">
                   DESARROLLANDO INTERFACES DE USUARIOS INTUITIVAS
                 </h1>
               </div>
